@@ -1,10 +1,10 @@
 #EXECS = retrogame gamera
-EXECS = retrogame
+EXECS = gpio2kbd
 CC    = gcc $(CFLAGS) -Wall -Ofast -fomit-frame-pointer -funroll-loops -s
 
 all: $(EXECS)
 
-retrogame: retrogame.c keyTable.h
+gpio2kbd: retrogame.c keyTable.h
 	$(CC) $< -o $@
 	strip $@
 
