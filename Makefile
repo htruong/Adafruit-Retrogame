@@ -8,7 +8,7 @@ gpio2kbd: retrogame.c keyTable.h
 	$(CC) $< -o $@
 	strip $@
 
-KEYFILE = /usr/include/linux/input.h
+KEYFILE = /usr/include/linux/input-event-codes.h
 keyTable.h: keyTableGen.sh $(KEYFILE)
 	sh $^ >$@
 
